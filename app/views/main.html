@@ -1,0 +1,11 @@
+<div class="main-bg">
+	<div class="input-group search-wines">
+		<input type="text" class="form-control" placeholder="enter wine or varietal" ng-model="search">
+		<span class="input-group-btn">
+			<button class="btn btn-default" type="button" ng-click="clearSearch()">Clear Search</button>
+		</span>
+	</div>
+	<div ng-repeat="wine in wines | filter:search">
+		<p class="wine-list">{{wine}}</p>
+	</div>
+</div>
